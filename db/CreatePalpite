@@ -1,0 +1,11 @@
+class CreatePalpite < ActiveRecord::Migration
+ def change
+  create_table :palpite do |t|
+   t.integer :id_palpite
+   t.integer :id_jogo
+   t.integer :id_usuario
+   t.integer :gol_mandante
+   t.integer :gol_visitante
+  end
+ end
+end

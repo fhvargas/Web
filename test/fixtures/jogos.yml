@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id_jogo: 1
+  time_mandante: MyString
+  time_visitante: MyString
+  gols_mandante: MyString
+  gols_visitante: MyString
+
+two:
+  id_jogo: 1
+  time_mandante: MyString
+  time_visitante: MyString
+  gols_mandante: MyString
+  gols_visitante: MyString

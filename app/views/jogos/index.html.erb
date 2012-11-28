@@ -1,0 +1,31 @@
+<h1>Listing jogos</h1>
+
+<table>
+  <tr>
+    <th>Id jogo</th>
+    <th>Time mandante</th>
+    <th>Time visitante</th>
+    <th>Gols mandante</th>
+    <th>Gols visitante</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @jogos.each do |jogo| %>
+  <tr>
+    <td><%= jogo.id_jogo %></td>
+    <td><%= jogo.time_mandante %></td>
+    <td><%= jogo.time_visitante %></td>
+    <td><%= jogo.gols_mandante %></td>
+    <td><%= jogo.gols_visitante %></td>
+    <td><%= link_to 'Show', jogo %></td>
+    <td><%= link_to 'Edit', edit_jogo_path(jogo) %></td>
+    <td><%= link_to 'Destroy', jogo, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Jogo', new_jogo_path %>

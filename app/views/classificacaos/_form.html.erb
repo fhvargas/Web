@@ -1,0 +1,53 @@
+<%= form_for(@classificacao) do |f| %>
+  <% if @classificacao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@classificacao.errors.count, "error") %> prohibited this classificacao from being saved:</h2>
+
+      <ul>
+      <% @classificacao.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_time %><br />
+    <%= f.number_field :id_time %>
+  </div>
+  <div class="field">
+    <%= f.label :pontos %><br />
+    <%= f.number_field :pontos %>
+  </div>
+  <div class="field">
+    <%= f.label :jogos %><br />
+    <%= f.number_field :jogos %>
+  </div>
+  <div class="field">
+    <%= f.label :vitorias %><br />
+    <%= f.number_field :vitorias %>
+  </div>
+  <div class="field">
+    <%= f.label :empates %><br />
+    <%= f.number_field :empates %>
+  </div>
+  <div class="field">
+    <%= f.label :derrotas %><br />
+    <%= f.number_field :derrotas %>
+  </div>
+  <div class="field">
+    <%= f.label :gols %><br />
+    <%= f.number_field :gols %>
+  </div>
+  <div class="field">
+    <%= f.label :golscontra %><br />
+    <%= f.number_field :golscontra %>
+  </div>
+  <div class="field">
+    <%= f.label :saldogols %><br />
+    <%= f.number_field :saldogols %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

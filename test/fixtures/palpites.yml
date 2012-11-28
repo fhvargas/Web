@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id_palpite: 1
+  id_jogo: 1
+  id_usuario: 1
+  gol_mandante: 1
+  gol_visitante: 1
+
+two:
+  id_palpite: 1
+  id_jogo: 1
+  id_usuario: 1
+  gol_mandante: 1
+  gol_visitante: 1

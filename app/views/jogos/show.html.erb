@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id jogo:</b>
+  <%= @jogo.id_jogo %>
+</p>
+
+<p>
+  <b>Time mandante:</b>
+  <%= @jogo.time_mandante %>
+</p>
+
+<p>
+  <b>Time visitante:</b>
+  <%= @jogo.time_visitante %>
+</p>
+
+<p>
+  <b>Gols mandante:</b>
+  <%= @jogo.gols_mandante %>
+</p>
+
+<p>
+  <b>Gols visitante:</b>
+  <%= @jogo.gols_visitante %>
+</p>
+
+
+<%= link_to 'Edit', edit_jogo_path(@jogo) %> |
+<%= link_to 'Back', jogos_path %>

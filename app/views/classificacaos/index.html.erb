@@ -1,0 +1,39 @@
+<h1>Listing classificacaos</h1>
+
+<table>
+  <tr>
+    <th>Id time</th>
+    <th>Pontos</th>
+    <th>Jogos</th>
+    <th>Vitorias</th>
+    <th>Empates</th>
+    <th>Derrotas</th>
+    <th>Gols</th>
+    <th>Golscontra</th>
+    <th>Saldogols</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @classificacaos.each do |classificacao| %>
+  <tr>
+    <td><%= classificacao.id_time %></td>
+    <td><%= classificacao.pontos %></td>
+    <td><%= classificacao.jogos %></td>
+    <td><%= classificacao.vitorias %></td>
+    <td><%= classificacao.empates %></td>
+    <td><%= classificacao.derrotas %></td>
+    <td><%= classificacao.gols %></td>
+    <td><%= classificacao.golscontra %></td>
+    <td><%= classificacao.saldogols %></td>
+    <td><%= link_to 'Show', classificacao %></td>
+    <td><%= link_to 'Edit', edit_classificacao_path(classificacao) %></td>
+    <td><%= link_to 'Destroy', classificacao, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Classificacao', new_classificacao_path %>

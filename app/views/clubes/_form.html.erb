@@ -1,0 +1,33 @@
+<%= form_for(@clube) do |f| %>
+  <% if @clube.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@clube.errors.count, "error") %> prohibited this clube from being saved:</h2>
+
+      <ul>
+      <% @clube.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br />
+    <%= f.text_area :descricao %>
+  </div>
+  <div class="field">
+    <%= f.label :estadio %><br />
+    <%= f.text_field :estadio %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

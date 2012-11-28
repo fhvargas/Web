@@ -1,0 +1,37 @@
+<%= form_for(@palpite) do |f| %>
+  <% if @palpite.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@palpite.errors.count, "error") %> prohibited this palpite from being saved:</h2>
+
+      <ul>
+      <% @palpite.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_palpite %><br />
+    <%= f.number_field :id_palpite %>
+  </div>
+  <div class="field">
+    <%= f.label :id_jogo %><br />
+    <%= f.number_field :id_jogo %>
+  </div>
+  <div class="field">
+    <%= f.label :id_usuario %><br />
+    <%= f.number_field :id_usuario %>
+  </div>
+  <div class="field">
+    <%= f.label :gol_mandante %><br />
+    <%= f.number_field :gol_mandante %>
+  </div>
+  <div class="field">
+    <%= f.label :gol_visitante %><br />
+    <%= f.number_field :gol_visitante %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

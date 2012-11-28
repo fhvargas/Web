@@ -1,0 +1,31 @@
+<h1>Listing palpites</h1>
+
+<table>
+  <tr>
+    <th>Id palpite</th>
+    <th>Id jogo</th>
+    <th>Id usuario</th>
+    <th>Gol mandante</th>
+    <th>Gol visitante</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @palpites.each do |palpite| %>
+  <tr>
+    <td><%= palpite.id_palpite %></td>
+    <td><%= palpite.id_jogo %></td>
+    <td><%= palpite.id_usuario %></td>
+    <td><%= palpite.gol_mandante %></td>
+    <td><%= palpite.gol_visitante %></td>
+    <td><%= link_to 'Show', palpite %></td>
+    <td><%= link_to 'Edit', edit_palpite_path(palpite) %></td>
+    <td><%= link_to 'Destroy', palpite, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Palpite', new_palpite_path %>

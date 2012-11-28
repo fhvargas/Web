@@ -1,0 +1,29 @@
+<h1>Listing clubes</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Nome</th>
+    <th>Descricao</th>
+    <th>Estadio</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clubes.each do |clube| %>
+  <tr>
+    <td><%= clube.id %></td>
+    <td><%= clube.nome %></td>
+    <td><%= clube.descricao %></td>
+    <td><%= clube.estadio %></td>
+    <td><%= link_to 'Show', clube %></td>
+    <td><%= link_to 'Edit', edit_clube_path(clube) %></td>
+    <td><%= link_to 'Destroy', clube, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Clube', new_clube_path %>

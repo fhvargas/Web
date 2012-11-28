@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id palpite:</b>
+  <%= @palpite.id_palpite %>
+</p>
+
+<p>
+  <b>Id jogo:</b>
+  <%= @palpite.id_jogo %>
+</p>
+
+<p>
+  <b>Id usuario:</b>
+  <%= @palpite.id_usuario %>
+</p>
+
+<p>
+  <b>Gol mandante:</b>
+  <%= @palpite.gol_mandante %>
+</p>
+
+<p>
+  <b>Gol visitante:</b>
+  <%= @palpite.gol_visitante %>
+</p>
+
+
+<%= link_to 'Edit', edit_palpite_path(@palpite) %> |
+<%= link_to 'Back', palpites_path %>
