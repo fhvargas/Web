@@ -47,7 +47,7 @@ class ClubesController < ApplicationController
         format.html { redirect_to @clube, :notice => 'Clube was successfully created.' }
         format.json { render :json => @clube, :status => :created, :location => @clube }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "New" }
         format.json { render :json => @clube.errors, :status => :unprocessable_entity }
       end
     end
@@ -63,7 +63,7 @@ class ClubesController < ApplicationController
         format.html { redirect_to @clube, :notice => 'Clube was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => "Edit" }
         format.json { render :json => @clube.errors, :status => :unprocessable_entity }
       end
     end
