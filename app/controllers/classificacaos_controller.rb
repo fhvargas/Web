@@ -47,7 +47,7 @@ class ClassificacaosController < ApplicationController
         format.html { redirect_to @classificacao, :notice => 'Classificacao was successfully created.' }
         format.json { render :json => @classificacao, :status => :created, :location => @classificacao }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "New" }
         format.json { render :json => @classificacao.errors, :status => :unprocessable_entity }
       end
     end
@@ -63,7 +63,7 @@ class ClassificacaosController < ApplicationController
         format.html { redirect_to @classificacao, :notice => 'Classificacao was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => "Edit" }
         format.json { render :json => @classificacao.errors, :status => :unprocessable_entity }
       end
     end
