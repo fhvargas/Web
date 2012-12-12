@@ -7,6 +7,8 @@ Bolao::Application.routes.draw do
 
   resources :jogos
 
+  resources :clubes
+	
   get "home/index"
   get "bolao" => 'bolao#index'
 

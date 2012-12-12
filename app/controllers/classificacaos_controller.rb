@@ -47,7 +47,7 @@ class ClassificacaosController < ApplicationController
         format.html { redirect_to @classificacao, :notice => 'Classificacao was successfully created.' }
         format.json { render :json => @classificacao, :status => :created, :location => @classificacao }
       else
-        format.html { render :action => "New" }
+        format.html { render :action => "new" }
         format.json { render :json => @classificacao.errors, :status => :unprocessable_entity }
       end
     end
@@ -63,7 +63,7 @@ class ClassificacaosController < ApplicationController
         format.html { redirect_to @classificacao, :notice => 'Classificacao was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render :action => "Edit" }
+        format.html { render :action => "edit" }
         format.json { render :json => @classificacao.errors, :status => :unprocessable_entity }
       end
     end
@@ -71,7 +71,6 @@ class ClassificacaosController < ApplicationController
 
   # DELETE /classificacaos/1
   # DELETE /classificacaos/1.json
-  
   def destroy
     @classificacao = Classificacao.find(params[:id])
     @classificacao.destroy

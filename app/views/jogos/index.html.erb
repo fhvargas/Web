@@ -1,17 +1,16 @@
-<h1>Listing jogos</h1>
+<h1>Todos os Jogos do campeonato:</h1>
 
 <table>
   <tr>
-    <th>Id Jogo</th>
-    <th>Time Mandante</th>
-    <th>Time Visitante</th>
-    <th>Gols Mandante</th>
-    <th>Gols Visitante</th>
+    <th>Rodada</th>
+    <th>Time mandante</th>
+    <th>Time visitante</th>
+    <th>Gols mandante</th>
+    <th>Gols visitante</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-
 
 <% @jogos.each do |jogo| %>
   <tr>
@@ -20,13 +19,13 @@
     <td><%= jogo.time_visitante %></td>
     <td><%= jogo.gols_mandante %></td>
     <td><%= jogo.gols_visitante %></td>
-    <td><%= link_to 'Show', jogo %></td>
-    <td><%= link_to 'Edit', edit_jogo_path(jogo) %></td>
-    <td><%= link_to 'Destroy', jogo, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+    <td><%= link_to 'Visualizar', jogo %></td>
+    <td><%= link_to 'Editar', edit_jogo_path(jogo) %></td>
+    <td><%= link_to 'Apagar', jogo, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Jogo', new_jogo_path %>
+<%= link_to 'Inserir Jogo', new_jogo_path %>
