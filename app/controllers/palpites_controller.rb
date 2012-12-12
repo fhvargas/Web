@@ -53,6 +53,7 @@ class PalpitesController < ApplicationController
     end
   end
 
+
   # PUT /palpites/1
   # PUT /palpites/1.json
   def update
