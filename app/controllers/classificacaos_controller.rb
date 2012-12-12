@@ -71,6 +71,7 @@ class ClassificacaosController < ApplicationController
 
   # DELETE /classificacaos/1
   # DELETE /classificacaos/1.json
+  
   def destroy
     @classificacao = Classificacao.find(params[:id])
     @classificacao.destroy
