@@ -47,7 +47,7 @@ class PalpitesController < ApplicationController
         format.html { redirect_to @palpite, :notice => 'Palpite was successfully created.' }
         format.json { render :json => @palpite, :status => :created, :location => @palpite }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "New" }
         format.json { render :json => @palpite.errors, :status => :unprocessable_entity }
       end
     end
@@ -63,7 +63,7 @@ class PalpitesController < ApplicationController
         format.html { redirect_to @palpite, :notice => 'Palpite was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => "Edit" }
         format.json { render :json => @palpite.errors, :status => :unprocessable_entity }
       end
     end
